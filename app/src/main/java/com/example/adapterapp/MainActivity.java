@@ -13,8 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
 
-    ListView listView;
-
+ ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,21 +25,17 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // AdapterView
-        listView = findViewById(R.id.listView);
 
-        // Data Source
-        String[] countries = {"United States of America","Germany","Saudi Arabia","France","India","China","Bhutan","Nepal","Bhutan","Bangladesh"};
+        listView =findViewById(R.id.listView);
 
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,countries);
+        String[] countries = {"Nepal","Pakistan","Bangladesh","Sri-Lanka","India","Afganistan"};
 
 
-        // Link listview with the adapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,countries);
+
+
         listView.setAdapter(adapter);
-
-        // Adapter: act as a bridge between the
-        // data source and the adapterView
 
     }
 }
